@@ -1,0 +1,56 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+---
+<html lang="en">
+	<head>
+    <!-- Primary Meta Tags -->
+    <title>Lance Flores | Web Designer and Developer</title>
+    <meta name="description" content="Lance Flores is a professional freelance web designer and developer offering custom web solutions tailored to your business needs.">
+    <meta name="keywords" content="freelance web designer, freelance web developer, custom web design, responsive websites, SEO services, website development">
+    <meta name="author" content="Lance Flores">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lance Flores | Web Designer and Developer">
+    <meta property="og:description" content="Custom web design and development services by Lance Flores, specializing in modern, responsive, and user-friendly websites.">
+    <meta property="og:url" content="https://www.lanceflores.netlify.app">
+    <meta property="og:image" content="https://www.lanceflores.netlify.app/images/lance-flores-og-image.jpg">
+    <meta property="og:site_name" content="Lance Flores - Web Designer and Developer">
+
+    <!-- Twitter
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lance Flores | Web Designer and Developer">
+    <meta name="twitter:description" content="Custom web design and development services by Lance Flores, specializing in modern, responsive, and user-friendly websites.">
+    <meta name="twitter:image" content="https://www.lanceflores.netlify.app/images/lance-flores-twitter-image.jpg">
+    <meta name="twitter:site" content="@your_twitter_handle"> -->
+
+    <!-- Additional SEO Meta Tags -->
+    <link rel="canonical" href="https://www.lanceflores.netlify.app">
+    <meta name="robots" content="index, follow">
+    <meta name="rating" content="general">
+
+    <!-- Schema.org for Google+ -->
+    <meta itemprop="name" content="Lance Flores | Web Designer and Developer">
+    <meta itemprop="description" content="Lance Flores provides professional freelance web design and development services for businesses looking to establish a strong online presence.">
+    <meta itemprop="image" content="https://www.lanceflores.dev/images/lance-flores-schema-image.jpg">
+
+    <!-- Favicon and Manifest -->
+    <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <!-- Sitemap -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+	</head>
+	<body class="container mx-auto max-w-screen-2xl bg-background text-text text-base antialiased overflow-x-hidden">
+		<Navbar />
+		<slot />
+        <Footer />
+	</body>
+</html>

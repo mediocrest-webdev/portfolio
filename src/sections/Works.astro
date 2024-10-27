@@ -1,0 +1,74 @@
+---
+import { Image } from 'astro:assets';
+
+// Image imports
+import Project1 from '../images/project-1.jpeg';
+import Project2 from '../images/project-2.jpeg';
+import Projects from '../components/Projects.astro';
+
+const ProjectList = [
+  {
+    year: "2024",
+    title: "GreenThumb Landscaping",
+    description: "Designed and developed a clean, professional website for landscaping businesses, showcasing projects, services, and enhancing client engagement through an easy-to-navigate design.",
+    category: "Web design & development",
+    link:"https://greenthumblandscapes.netlify.app/",
+    image: Project1,
+  },
+  {
+    year: "2024",
+    title: "Serenity Spa",
+    description: "Created an elegant and engaging website for spa businesses, highlighting its relaxing services and providing a seamless online experience for potential clients.",
+    category: "Web design & development",
+    link:"https://serenityspaservices.netlify.app/",
+    image: Project2,
+  },
+];
+---
+
+<!-- Project Section -->
+<section id="works" class="flex flex-col w-full">
+  <!-- Section Title -->
+  <h2 class="self-center md:self-start text-xl md:text-2xl leading-none mb-8 md:ml-8">Featured works</h2>
+
+  <!-- Loop through ProjectList -->
+  {ProjectList.map((project, index) => (
+    <article class="grid gap-4 mb-4 lg:grid-cols-2 bg-background" aria-labelledby={`project-${index + 1}-title`}>
+      <!-- Conditionally render details or image first based on index -->
+      {index % 2 === 0 ? (
+        <>
+          <!-- Project Details -->
+          <Projects
+            year={project.year}
+            title={project.title}
+            description={project.description}
+            category={project.category}
+            link={project.link}
+          />
+
+          <!-- Project Image -->
+          <figure class="order-1 lg:order-2">
+            <Image src={project.image} alt={`${project.title} project`} width="570" height="370" class="w-full rounded-lg object-cover" />
+          </figure>
+        </>
+      ) : (
+        <>
+          <!-- Project Image -->
+          <figure class="order-1">
+            <Image src={project.image} alt={`${project.title} project`} width="570" height="370" class="w-full rounded-lg object-cover" />
+          </figure>
+
+          <!-- Project Details -->
+          <Projects
+            year={project.year}
+            title={project.title}
+            description={project.description}
+            category={project.category}
+            link={project.link}
+          />
+        </>
+      )}
+    </article>
+  ))}
+</section>
+<!-- Project Section End -->
