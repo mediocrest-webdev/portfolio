@@ -66,5 +66,4 @@ p, li, figcaption {
   .span-border{
     @apply px-3 py-1 text-sm font-medium border-2 rounded-full w-max text-nowrap
   }
-
 }
