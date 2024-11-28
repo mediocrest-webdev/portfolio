@@ -3,62 +3,152 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 ---
+
 <html lang="en">
-	<head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-P4CG8F4X');</script>
-    <!-- End Google Tag Manager -->
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-C36M60N8VP"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-C36M60N8VP");
+    </script>
 
     <!-- Primary Meta Tags -->
     <title>Web Designer and Web Developer Manila, Philippines | Lance Flores</title>
-    <meta name="description" content="Lance Flores is a professional freelance web designer and web developer offering custom web solutions tailored to your business needs.">
-    <meta name="keywords" content="freelance web designer, freelance web developer, custom web design, responsive websites, SEO services, website development, website design, website design services, website development services">
-    <meta name="author" content="Lance Flores">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
+    <meta
+      name="description"
+      content="Lance Flores is a professional freelance web designer and web developer offering custom web solutions tailored to your business needs."
+    />
+    <meta
+      name="keywords"
+      content="freelance web designer, freelance web developer, custom web design, responsive websites, SEO services, website development, website design, website design services, website development services"
+    />
+    <meta
+      name="author"
+      content="Lance Flores"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta charset="UTF-8" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Web Designer and Web Developer Manila, Philippines | Lance Flores">
-    <meta property="og:description" content="Custom web design and development services by Lance Flores, specializing in modern, responsive, and user-friendly websites.">
-    <meta property="og:url" content="https://lanceflores.netlify.app">
-    <meta property="og:image" content="/social-image.png">
-    <meta property="og:site_name" content="Lance Flores - Web Designer and Developer">
+    <meta
+      property="og:type"
+      content="website"
+    />
+    <meta
+      property="og:title"
+      content="Web Designer and Web Developer Manila, Philippines | Lance Flores"
+    />
+    <meta
+      property="og:description"
+      content="Custom web design and development services by Lance Flores, specializing in modern, responsive, and user-friendly websites."
+    />
+    <meta
+      property="og:url"
+      content="https://lanceflores.netlify.app"
+    />
+    <meta
+      property="og:image"
+      content="/social-image.png"
+    />
+    <meta
+      property="og:site_name"
+      content="Lance Flores - Web Designer and Developer"
+    />
 
     <!-- Additional SEO Meta Tags -->
-    <link rel="canonical" href="https://lanceflores.netlify.app">
-    <meta name="robots" content="index, follow">
-    <meta name="rating" content="general">
+    <link
+      rel="canonical"
+      href="https://lanceflores.netlify.app"
+    />
+    <meta
+      name="robots"
+      content="index, follow"
+    />
+    <meta
+      name="rating"
+      content="general"
+    />
 
     <!-- Schema.org for Google+ -->
-    <meta itemprop="name" content="Web Designer and Web Developer Manila, Philippines | Lance Flores">
-    <meta itemprop="description" content="Lance Flores provides professional freelance web design and development services for businesses looking to establish a strong online presence.">
-    <meta itemprop="image" content="/social-image.png">
+    <meta
+      itemprop="name"
+      content="Web Designer and Web Developer Manila, Philippines | Lance Flores"
+    />
+    <meta
+      itemprop="description"
+      content="Lance Flores provides professional freelance web design and development services for businesses looking to establish a strong online presence."
+    />
+    <meta
+      itemprop="image"
+      content="/social-image.png"
+    />
 
     <!-- Favicon and Manifest -->
-    <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon-48x48.png"
+      sizes="48x48"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+    <link
+      rel="shortcut icon"
+      href="/favicon.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-touch-icon.png"
+    />
+    <link
+      rel="manifest"
+      href="/site.webmanifest"
+    />
+
     <!-- Sitemap -->
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      rel="sitemap"
+      href="/sitemap-index.xml"
+    />
 
     <!-- Google Verification -->
-    <meta name="google-site-verification"content="2XktRvq446Q8tfXjo5MDnNojjv439NnSaZX42W9AoF8" />
-	</head>
-	<body class="container mx-auto max-w-screen-2xl bg-background text-text text-base antialiased overflow-x-hidden">
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4CG8F4X" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-         
-		<Navbar />
-		<slot />
-        <Footer />
-	</body>
+    <meta
+      name="google-site-verification"
+      content="2XktRvq446Q8tfXjo5MDnNojjv439NnSaZX42W9AoF8"
+    />
+  </head>
+  <body
+    class="container mx-auto max-w-screen-2xl bg-background text-text text-base antialiased overflow-x-hidden"
+  >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-P4CG8F4X"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+
+    <Navbar />
+    <slot />
+    <Footer />
+  </body>
 </html>
