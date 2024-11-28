@@ -18,15 +18,15 @@ const navLinks = [
     </a>
 
     <!-- Desktop Menu -->
-    <div class='items-center hidden gap-4 md:flex lg:gap-8 ms-auto transition-colors duration-200 hover:text-contrast'>
+    <div class='items-center hidden gap-2 lg:flex ms-auto transition-colors duration-200'>
       {navLinks.map((link) => (
-        <a href={link.href} class="">{link.label}</a>
+        <a href={link.href} class="transition-colors duration-300 hover:bg-gray-100 px-4 py-2 rounded-full">{link.label}</a>
       ))}
     </div>
     
     <!-- Customizable Button -->
     <Button 
-      style="hidden sm:block ml-auto bg-text text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:shadow-sm transition-transform hover:scale-105 duration-300 delay-50" 
+      style="hidden lg:block ml-auto bg-text text-white px-3 py-1 lg:px-6 lg:py-3 rounded-full hover:shadow-sm transition-transform hover:scale-105 duration-300 delay-50" 
       label="Book a call" 
       data-cal-link="mediocrest/15min" 
       data-cal-namespace="15min" 
@@ -35,21 +35,21 @@ const navLinks = [
 
     <!-- Mobile Menu Button -->
     <div id="mobile-menu-button" class="cursor-pointer">
-      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000" class="md:hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000" class="lg:hidden">
         <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
       </svg>
     </div>
   </nav>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden mb-2 md:hidden">
+  <div id="mobile-menu" class="hidden mb-2 lg:hidden">
     <div class="flex flex-col items-start mt-4 mb-6">
       {navLinks.map((link) => (
         <a href={link.href} class="py-2">{link.label}</a>
       ))}
     </div>
     <Button 
-      style="bg-text text-white px-3 py-1 sm:px-4 py-2 rounded-full hover:shadow-sm transition-transform hover:scale-105 duration-300 delay-50" 
+      style="bg-text text-white px-4 py-2 sm:px-6 py-3 rounded-full hover:shadow-sm transition-transform hover:scale-105 duration-300 delay-50" 
       label="Book a call" 
     />
   </div>
@@ -75,13 +75,13 @@ const navLinks = [
     // Change the SVG based on the state
     if (isMenuOpen) {
       mobileMenuButton.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000" class="md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000" class="lg:hidden">
           <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
         </svg>
       `;
     } else {
       mobileMenuButton.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000" class="md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000" class="lg:hidden">
           <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
         </svg>
       `;
