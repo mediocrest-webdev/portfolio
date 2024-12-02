@@ -29,11 +29,11 @@ const ProjectList = [
 <!-- Project Section -->
 <section id="works" class="flex flex-col w-full">
   <!-- Section Title -->
-  <h2 class="self-center text-xl md:text-2xl leading-none mb-8 md:ml-8">Featured works</h2>
+  <h2 class="self-center text-xl md:text-2xl leading-none mb-8 md:ml-8" data-aos="fade-up" data-aos-duration="1500">Featured works</h2>
 
   <!-- Loop through ProjectList -->
   {ProjectList.map((project, index) => (
-    <article class="grid gap-2 mb-8 lg:mb-2 lg:grid-cols-2 bg-background" aria-labelledby={`project-${index + 1}-title`}>
+    <article class="grid gap-2 mb-8 lg:mb-2 lg:grid-cols-2 bg-background"  data-aos="fade-up" data-aos-duration="1500" aria-labelledby={`project-${index + 1}-title`}>
       <!-- Conditionally render details or image first based on index -->
       {index % 2 === 0 ? (
         <>
