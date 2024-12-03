@@ -1,0 +1,2 @@
+# Redirect non-www to www for all paths
+https://lanceflores.netlify.app/*  https://www.lanceflores.netlify.app/:splat  301!
