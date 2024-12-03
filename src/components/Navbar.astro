@@ -13,14 +13,14 @@ const navLinks = [
 <!-- Navbar Start -->
 <header class='container sticky top-0 z-50 px-8 py-4 mx-auto shadow-sm max-w-screen-2xl bg-background bg-opacity-70 backdrop-blur-md'>
   <nav class="flex items-center justify-between gap-2">
-    <a href="/" class='font-medium'>
+    <a href="/" class='font-semibold'>
       Lance Flores <sup class="font-semibold">©</sup>
     </a>
 
     <!-- Desktop Menu -->
     <div class='items-center hidden gap-2 lg:flex ms-auto transition-colors duration-200'>
       {navLinks.map((link) => (
-        <a href={link.href} class="text-contrast transition-all ease-out duration-500 hover:bg-gray-100 hover:drop-shadow-sm hover:text-text px-4 py-2 rounded-full">{link.label}</a>
+        <a href={link.href} class="text-contrast transition-all ease-out duration-1000 hover:bg-gray-100 hover:drop-shadow-sm hover:text-text px-4 py-2 rounded-full">{link.label}</a>
       ))}
     </div>
     

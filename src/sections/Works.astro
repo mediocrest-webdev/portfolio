@@ -11,7 +11,8 @@ const ProjectList = [
     year: "2024",
     title: "GreenThumb Landscaping",
     description: "Designed and developed a clean, professional website for landscaping businesses, showcasing projects, services, and enhancing client engagement through an easy-to-navigate design.",
-    category:"Design & Development",
+    category:"Design",
+    category2:"Development",
     link:"https://greenthumblandscapes.netlify.app/",
     image: Project1,
   },
@@ -19,7 +20,8 @@ const ProjectList = [
     year: "2024",
     title: "Serenity Spa",
     description: "Created an elegant and engaging website for spa businesses, highlighting its relaxing services and providing a seamless online experience for potential clients.",
-    category:"Design & Development",
+    category:"Design",
+    category2:"Development",
     link:"https://serenityspaservices.netlify.app/",
     image: Project2,
   },
@@ -28,9 +30,6 @@ const ProjectList = [
 
 <!-- Project Section -->
 <section id="works" class="flex flex-col w-full">
-  <!-- Section Title -->
-  <h2 class="self-center text-xl md:text-2xl leading-none mb-8 md:ml-8" data-aos="fade-up" data-aos-duration="1500">Featured works</h2>
-
   <!-- Loop through ProjectList -->
   {ProjectList.map((project, index) => (
     <article class="grid gap-2 mb-8 lg:mb-2 lg:grid-cols-2 bg-background"  data-aos="fade-up" data-aos-duration="1500" aria-labelledby={`project-${index + 1}-title`}>
@@ -43,11 +42,12 @@ const ProjectList = [
             title={project.title}
             description={project.description}
             category={project.category}
+            category2={project.category2}
             link={project.link}
           />
 
           <!-- Project Image -->
-          <figure class="order-1 lg:order-2">
+          <figure class="order-1 lg:order">
             <Image src={project.image} alt={`${project.title} project`} width="570" height="370" class="size-full rounded-lg object-cover" />
           </figure>
         </>
@@ -64,6 +64,7 @@ const ProjectList = [
             title={project.title}
             description={project.description}
             category={project.category}
+            category2={project.category2}
             link={project.link}
           />
         </>

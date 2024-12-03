@@ -5,7 +5,7 @@ export default {
 		extend: {
 			colors: {
 				text: "hsl(300, 75%, 1%)",
-				contrast:"hsl(300, 0%, 25%)",
+				contrast:"hsl(300, 0%, 40%)",
 				background: "hsl(240, 60%, 99%)",
 				primary: "hsl(243, 68%, 48%)", 
 				accent: "hsl(242, 100%, 62%)",
@@ -22,11 +22,11 @@ export default {
 				"5xl": "3.815rem", 
 			},
 			fontFamily: {
-				'light': ['GeneralSans-Light', 'sans-serif'],
-				'regular': ['GeneralSans-Regular', 'sans-serif'],
-				'medium': ['GeneralSans-Medium', 'sans-serif'],
-				'semibold': ['GeneralSans-Semibold', 'sans-serif'],
-				'bold': ['GeneralSans-Bold', 'sans-serif'],
+				'light': ['InterTight-Light', 'sans-serif'],
+				'regular': ['InterTight-Regular', 'sans-serif'],
+				'medium': ['InterTight-Medium', 'sans-serif'],
+				'semibold': ['InterTight-Semibold', 'sans-serif'],
+				'bold': ['InterTight-Bold', 'sans-serif'],
 			},
 			// Add section spacer with more values
 			spacing: {
