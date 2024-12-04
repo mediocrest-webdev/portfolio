@@ -2,8 +2,8 @@
 import { Image } from 'astro:assets';
 
 // Image imports
-import Project1 from '../images/project-1.jpeg';
-import Project2 from '../images/project-2.jpeg';
+import Project1 from '../images/project-1.webp';
+import Project2 from '../images/project-2.webp';
 import Projects from '../components/Projects.astro';
 
 const ProjectList = [
@@ -48,14 +48,14 @@ const ProjectList = [
 
           <!-- Project Image -->
           <figure class="order-1 lg:order">
-            <Image src={project.image} alt={`${project.title} project`} width="570" height="370" class="size-full rounded-lg object-cover" />
+            <Image src={project.image} alt={`${project.title} project`} width="1920" height="1440" class="size-full rounded-lg object-cover" />
           </figure>
         </>
       ) : (
         <>
           <!-- Project Image -->
           <figure class="order-1">
-            <Image src={project.image} alt={`${project.title} project`} width="570" height="370" class="size-full rounded-lg object-cover" />
+            <Image src={project.image} alt={`${project.title} project`} width="1920" height="1440" class="size-full rounded-lg object-cover" />
           </figure>
 
           <!-- Project Details -->
