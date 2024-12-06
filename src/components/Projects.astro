@@ -3,20 +3,20 @@ const { year, title, description, category, category2, link } = Astro.props;
 ---
 <div class="flex flex-col justify-center order-2 span-border rounded-lg lg:order-1 w-full p-9">
   <header class="mb-8 space-y-4">
-    <div class="mb-4 inline-flex items-center gap-1">
-      <span class="text-xs sm:text-sm text-contrast span-border">{year}</span>
-      <span class="text-xs sm:text-sm text-contrast span-border">{category}</span>
-      <span class="text-xs sm:text-sm text-contrast span-border">{category2}</span>
-    </div>
     <h3
-      id="project-1-title"
-      class="text-lg md:text-xl leading-none"
+    id="project-1-title"
+    class="text-lg md:text-xl leading-none"
     >
-      {title}
-    </h3>
-    <p class="text-sm sm:text-base text-contrast">
-      {description}
-    </p>
+    {title}
+  </h3>
+  <p class="text-sm sm:text-base text-contrast">
+    {description}
+  </p>
+  <div class="mb-4 inline-flex items-center gap-1">
+    <span class="text-xs sm:text-sm text-contrast span-border">{year}</span>
+    <span class="text-xs sm:text-sm text-contrast span-border">{category}</span>
+    <span class="text-xs sm:text-sm text-contrast span-border">{category2}</span>
+  </div>
   </header>
   <footer class="mb-4">
     <a href={link} target="_blank" class="text-sm sm:text-base bg-text text-white px-6 py-3 rounded-full cursor-pointer w-fit">View project</a>
