@@ -4,72 +4,112 @@ import { Image } from 'astro:assets';
 // Image imports
 import Project1 from '../images/project-1.webp';
 import Project2 from '../images/project-2.webp';
-import Projects from '../components/Projects.astro';
 
+// Project list array
 const ProjectList = [
   {
     year: "2024",
     title: "GreenThumb Landscaping",
     description: "Designed and developed a clean, professional website for landscaping businesses, showcasing projects, services, and enhancing client engagement through an easy-to-navigate design.",
-    category:"Design",
-    category2:"Development",
-    link:"https://greenthumblandscapes.netlify.app/",
+    category: "Design",
+    category2: "Development",
+    link: "https://greenthumblandscapes.netlify.app/",
     image: Project1,
   },
   {
     year: "2024",
     title: "Serenity Spa",
     description: "Created an elegant and engaging website for spa businesses, highlighting its relaxing services and providing a seamless online experience for potential clients.",
-    category:"Design",
-    category2:"Development",
-    link:"https://serenityspaservices.netlify.app/",
+    category: "Design",
+    category2: "Development",
+    link: "https://serenityspaservices.netlify.app/",
     image: Project2,
   },
 ];
 ---
 
 <!-- Project Section -->
-<section id="works" class="flex flex-col w-full">
-  <!-- Loop through ProjectList -->
+<section id="works" class="space-y-12">
   {ProjectList.map((project, index) => (
-    <article class="grid gap-2 mb-8 lg:mb-2 lg:grid-cols-2 bg-background"  data-aos="fade-up" data-aos-duration="1500" aria-labelledby={`project-${index + 1}-title`}>
-      <!-- Conditionally render details or image first based on index -->
+    <div 
+      class={`grid grid-cols-1 lg:grid-cols-12 gap-12 items-center border-2 rounded-lg p-4`} 
+      data-aos="fade-up" 
+      data-aos-duration="1500"
+      key={index}
+    >
+      {/* Conditional order based on index */}
       {index % 2 === 0 ? (
         <>
           <!-- Project Details -->
-          <Projects
-            year={project.year}
-            title={project.title}
-            description={project.description}
-            category={project.category}
-            category2={project.category2}
-            link={project.link}
-          />
+          <div class="lg:col-span-4 p-4 order-2">
+            <div class="space-y-4">
+              <h2 class="text-xl md:text-2xl leading-none">{project.title}</h2>
+              <p>{project.description}</p>
+              <div class="flex gap-1">
+                <span class="span-border">{project.year}</span>
+                <span class="span-border">{project.category}</span>
+                <span class="span-border">{project.category2}</span>
+              </div>
+            </div>
+            <a 
+              href={project.link} 
+              type="button" 
+              role="button" 
+              class="block w-max mt-8 bg-text text-white px-6 py-3 rounded-full transition-transform ease-in-out hover:scale-105 duration-300 delay-50" 
+              rel="noopener noreferrer"
+            >
+              View project 👈🏻
+            </a>
+          </div>
+          <!-- Project Details End -->
 
           <!-- Project Image -->
-          <figure class="order-1 lg:order">
-            <Image src={project.image} alt={`${project.title} project`} width="1920" height="1440" class="size-full rounded-lg object-cover" />
-          </figure>
+          <div class="lg:col-span-8 order-1 lg:order-2">
+            <Image 
+              src={project.image} 
+              alt={project.title} 
+              width="1920" 
+              height="1440" 
+              class="size-full sm:w-full sm:h-96 xl:h-[32rem] rounded-lg object-cover"
+            />
+          </div>
         </>
       ) : (
         <>
           <!-- Project Image -->
-          <figure class="order-1">
-            <Image src={project.image} alt={`${project.title} project`} width="1920" height="1440" class="size-full rounded-lg object-cover" />
-          </figure>
+          <div class="lg:col-span-8">
+            <Image 
+              src={project.image} 
+              alt={project.title} 
+              width="1920" 
+              height="1440" 
+              class="size-full sm:w-full sm:h-96 xl:h-[32rem] rounded-lg object-cover"
+            />
+          </div>
 
           <!-- Project Details -->
-          <Projects
-            year={project.year}
-            title={project.title}
-            description={project.description}
-            category={project.category}
-            category2={project.category2}
-            link={project.link}
-          />
+          <div class="lg:col-span-4 p-4">
+            <div class="space-y-4">
+              <h2 class="text-xl md:text-2xl leading-none">{project.title}</h2>
+              <p>{project.description}</p>
+              <div class="flex gap-1">
+                <span class="span-border">{project.year}</span>
+                <span class="span-border">{project.category}</span>
+                <span class="span-border">{project.category2}</span>
+              </div>
+            </div>
+            <a 
+              href={project.link} 
+              type="button" 
+              role="button" 
+              class="block w-max mt-8 bg-text text-white px-6 py-3 rounded-full transition-transform ease-in-out hover:scale-105 duration-300 delay-50" 
+              rel="noopener noreferrer"
+            >
+              View project 👈🏻
+            </a>
+          </div>
         </>
       )}
-    </article>
+    </div>
   ))}
 </section>
-<!-- Project Section End -->
