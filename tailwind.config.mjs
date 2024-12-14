@@ -5,28 +5,25 @@ export default {
 		extend: {
 			colors: {
 				text: "hsl(300, 75%, 1%)",
-				contrast:"hsl(300, 0%, 40%)",
 				background: "hsl(240, 60%, 99%)",
 				primary: "hsl(243, 68%, 48%)", 
 				accent: "hsl(242, 100%, 62%)",
 			},
-			fontSize: {
-				xs: "0.64rem",   
-				sm: "0.8rem", 
-				base: "1rem",   
-				lg: "1.25rem",  
-				xl: "1.563rem", 
-				"2xl": "1.953rem", 
-				"3xl": "2.441rem", 
-				"4xl": "3.052rem", 
-				"5xl": "3.815rem", 
-			},
+			// fontSize: {
+			// 	xs: "",   
+			// 	sm: "", 
+			// 	base: "",   
+			// 	lg: "",  
+			// 	xl: "", 
+			// 	"2xl": "", 
+			// 	"3xl": "", 
+			// 	"4xl": "", 
+			// 	"5xl": "", 
+			// },
 			fontFamily: {
-				'light': ['InterTight-Light', 'sans-serif'],
 				'regular': ['InterTight-Regular', 'sans-serif'],
 				'medium': ['InterTight-Medium', 'sans-serif'],
 				'semibold': ['InterTight-Semibold', 'sans-serif'],
-				'bold': ['InterTight-Bold', 'sans-serif'],
 			},
 			// Add section spacer with more values
 			spacing: {
