@@ -11,23 +11,26 @@ const navLinks = [
 ---
 
 <!-- Navbar Start -->
-<header class='sticky top-0 z-10 container px-8 py-4 mx-auto shadow-sm max-w-screen-2xl bg-background bg-opacity-70 backdrop-blur-md'>
+<header class='sticky top-0 z-50 container px-8 py-4 mx-auto shadow-sm max-w-screen-2xl bg-background bg-opacity-70 backdrop-blur-md'>
   <nav class="flex items-center justify-between gap-2">
-    <a href="/" class='font-semibold'>
-      Lance Flores <sup class="font-semibold">©</sup>
+    <a href="/" class='hidden md:block font-bold'>
+      LanceFlores <sup class="font-semibold">©</sup>
+    </a>
+    <a href="/" class='block md:hidden font-bold'>
+      LF <sup class="font-semibold">©</sup>
     </a>
 
     <!-- Desktop Menu -->
     <div class='items-center hidden gap-2 lg:flex ms-auto transition-colors duration-200'>
       {navLinks.map((link) => (
-        <a href={link.href} class="text-contrast transition-all ease-out duration-1000 hover:bg-gray-100 hover:drop-shadow-sm hover:text-text px-4 py-2 rounded-full">{link.label}</a>
+        <a href={link.href} class="text-contrast transition-all ease-out duration-1000 hover:bg-gray-200 hover:drop-shadow-sm hover:text-text px-4 py-2 rounded-full">{link.label}</a>
       ))}
     </div>
     
     <!-- Customizable Button -->
     <Button 
       style="hidden lg:block ml-auto bg-text text-white px-3 py-1 lg:px-6 lg:py-3 rounded-full transition-transform hover:scale-105 duration-300 delay-50" 
-      label="Let's talk 🚀" 
+      label="Get Started 🚀" 
       data-cal-link="mediocrest/15min" 
       data-cal-namespace="15min" 
       data-cal-config='{"layout":"month_view"}'
@@ -50,7 +53,7 @@ const navLinks = [
     </div>
     <Button 
       style="bg-text text-white px-4 py-2 sm:px-6 py-3 rounded-full hover:shadow-sm transition-transform hover:scale-105 duration-300 delay-50" 
-      label="Let's talk 🚀" 
+      label="Get Started 🚀" 
     />
   </div>
 </header>

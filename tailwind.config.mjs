@@ -9,17 +9,6 @@ export default {
 				primary: "hsl(243, 68%, 48%)", 
 				accent: "hsl(242, 100%, 62%)",
 			},
-			// fontSize: {
-			// 	xs: "",   
-			// 	sm: "", 
-			// 	base: "",   
-			// 	lg: "",  
-			// 	xl: "", 
-			// 	"2xl": "", 
-			// 	"3xl": "", 
-			// 	"4xl": "", 
-			// 	"5xl": "", 
-			// },
 			fontFamily: {
 				'regular': ['InterTight-Regular', 'sans-serif'],
 				'medium': ['InterTight-Medium', 'sans-serif'],

@@ -29,12 +29,10 @@ const ProjectList = [
 ---
 
 <!-- Project Section -->
-<section id="works" class="space-y-12">
+<section id="works" class="space-y-8">
   {ProjectList.map((project, index) => (
     <div 
-      class={`grid grid-cols-1 lg:grid-cols-12 gap-12 items-center border-2 rounded-lg p-4`} 
-      data-aos="fade-up" 
-      data-aos-duration="1500"
+      class={`grid grid-cols-1 lg:grid-cols-12 gap-12 items-center border-2 rounded-lg p-4 bg-background lg:sticky top-20`} 
       key={index}
     >
       {/* Conditional order based on index */}
@@ -70,7 +68,7 @@ const ProjectList = [
               alt={project.title} 
               width="1920" 
               height="1440" 
-              class="size-full sm:w-full sm:h-96 xl:h-[32rem] rounded-lg object-cover"
+              class="size-full sm:w-full sm:h-auto xl:h-[32rem] rounded-lg object-cover"
             />
           </div>
         </>
@@ -83,7 +81,7 @@ const ProjectList = [
               alt={project.title} 
               width="1920" 
               height="1440" 
-              class="size-full sm:w-full sm:h-96 xl:h-[32rem] rounded-lg object-cover"
+              class="size-full sm:w-full sm:h-auto xl:h-[32rem] rounded-lg object-cover"
             />
           </div>
 
