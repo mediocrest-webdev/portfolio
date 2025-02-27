@@ -9,11 +9,6 @@ export default {
 				primary: "hsl(243, 68%, 48%)", 
 				accent: "hsl(242, 100%, 62%)",
 			},
-			fontFamily: {
-				'regular': ['InterTight-Regular', 'sans-serif'],
-				'medium': ['InterTight-Medium', 'sans-serif'],
-				'semibold': ['InterTight-Semibold', 'sans-serif'],
-			},
 			// Add section spacer with more values
 			spacing: {
 				'section-sm': '2rem',   // Small section spacing

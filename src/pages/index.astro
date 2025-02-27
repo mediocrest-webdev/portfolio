@@ -4,13 +4,16 @@ import Hero from "../sections/Hero.astro";
 import Testimonial from "../sections/Testimonial.astro";
 import CTA from "../sections/CTA.astro";
 import Works from "../sections/Works.astro";
+import Benefits from "../sections/Benefits.astro";
+import FAQ from "../sections/FAQ.astro";
 ---
 <BaseLayout>
-	<main class="px-4 sm:px-8 scroll-auto space-y-section-xxl md:space-y-40 relative">
+	<main class="px-6 sm:px-8 scroll-smooth space-y-section-xl relative">
 		<Hero />
 		<Works />
+		<Benefits />
 		<Testimonial />
+		<FAQ />
 		<CTA />
 	</main>
 </BaseLayout>
-
