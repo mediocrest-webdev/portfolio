@@ -6,8 +6,6 @@ export default {
 			colors: {
 				text: "hsl(300, 75%, 1%)",
 				background: "hsl(240, 60%, 99%)",
-				primary: "hsl(243, 68%, 48%)", 
-				accent: "hsl(242, 100%, 62%)",
 			},
 			// Add section spacer with more values
 			spacing: {

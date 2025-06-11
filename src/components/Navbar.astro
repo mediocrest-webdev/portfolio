@@ -1,42 +1,43 @@
 ---
-import tailwindConfig from "../../tailwind.config.mjs";
 import Button from "./Button.astro";
 
 const navLinks = [
-  { href: '#', label: 'Home' },
+  { href: '/', label: 'Home' },
   { href: '#works', label: 'Featured works' },
   { href: '#benefits', label: 'Benefits' },
-  { href: '#testimonials', label: 'Reviews' },
   { href: '#faq', label: 'FAQs' },
+  { href: 'mailto:hello.lanceflores@gmail.com', label: 'Get in touch' },
 ];
 ---
 
 <!-- Navbar Start -->
-<header class='sticky top-0 z-50 container px-8 py-4 mx-auto border-b max-w-screen-2xl bg-background bg-opacity-70 backdrop-blur-md'>
-  <nav class="flex items-center justify-between gap-2">
-    <a href="/" aria-label="Brand" class="font-bold tracking-tight leading-none text-lg">
+<header class='container sticky top-0 z-50 px-8 py-4 mx-auto shadow-sm max-w-screen-2xl bg-background bg-opacity-70 backdrop-blur-md'>
+  <nav class="flex items-center justify-between">
+    <a href="/" class='hidden sm:block font-bold tracking-tight leading-none'>
       LANCE <br> FLORES<span class="text-green-600">.</span>
+    </a>
+    <a href="/" class='block sm:hidden font-bold tracking-tight'>
+      LF<span class="text-green-600">.</span>
     </a>
 
     <!-- Desktop Menu -->
     <div class='items-center hidden gap-2 lg:flex ms-auto transition-colors duration-200'>
       {navLinks.map((link) => (
-        <a href={link.href} class="text-contrast transition-all ease-out duration-1000 hover:bg-slate-100 hover:drop-shadow-sm px-4 py-2 rounded-full">{link.label}</a>
+        <a href={link.href} class="transition-colors duration-300 hover:bg-gray-100 px-4 py-2 rounded-full">{link.label}</a>
       ))}
     </div>
     
     <!-- Customizable Button -->
-    <a href="mailto:hello.lanceflores@gmail.com" class="hidden lg:block ml-auto border px-4 py-2 md:px-6 md:py-3 sm:px-4 sm:py-2 rounded-full hover:shadow-sm transition-transform hover:scale-105 duration-300 delay-50 ">Email ✉️</a>
     <Button 
-    style="hidden lg:block bg-text text-white px-3 py-1 lg:px-6 lg:py-3 rounded-full transition-transform hover:scale-105 duration-300 delay-50" 
-    label="Get started 🚀" 
-    data-cal-link="mediocrest/15min" 
-    data-cal-namespace="15min" 
-    data-cal-config='{"layout":"month_view"}'
+      style="hidden lg:block ml-auto bg-text text-white px-3 py-1 lg:px-6 lg:py-3 rounded-full hover:shadow-sm transition-transform hover:scale-105 duration-300 delay-50" 
+      label="Book a call" 
+      data-cal-link="mediocrest/15min" 
+      data-cal-namespace="15min" 
+      data-cal-config='{"layout":"month_view"}'
     />
 
     <!-- Mobile Menu Button -->
-    <div id="mobile-menu-button" class="cursor-pointer">
+    <div id="mobile-menu-button" class="cursor-pointer" aria-expanded="false" aria-controls="mobile-menu" role="button" tabindex="0">
       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000" class="lg:hidden">
         <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
       </svg>
@@ -47,13 +48,12 @@ const navLinks = [
   <div id="mobile-menu" class="hidden mb-2 lg:hidden">
     <div class="flex flex-col items-start mt-4 mb-6">
       {navLinks.map((link) => (
-        <a href={link.href} class="py-2 text-contrast">{link.label}</a>
+        <a href={link.href} class="py-2">{link.label}</a>
       ))}
     </div>
-    <a href="mailto:hello.lanceflores@gmail.com" class="border px-4 py-2 md:px-6 md:py-3 sm:px-4 sm:py-2 mr-2 rounded-full hover:shadow-sm transition-transform hover:scale-105 duration-300 delay-50">Email ✉️</a>
     <Button 
-    style="bg-text text-white px-4 py-2 md:px-6 md:py-3 sm:px-4 sm:py-2 rounded-full hover:shadow-sm transition-transform hover:scale-105 duration-300 delay-50 mr-2" 
-    label="Get started 🚀" 
+      style="bg-text text-white px-4 py-2 sm:px-6 py-3 rounded-full hover:shadow-sm transition-transform hover:scale-105 duration-300 delay-50" 
+      label="Book a call" 
     />
   </div>
 </header>
