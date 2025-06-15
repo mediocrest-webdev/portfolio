@@ -9,36 +9,36 @@ import Project2 from '../images/project-2.webp';
 const ProjectList = [
   {
     year: "2024",
-    title: "GreenThumb Landscaping",
-    description: "Designed and developed a clean, professional website for landscaping businesses, showcasing projects, services, and enhancing client engagement through an easy-to-navigate design.",
+    title: "GreenThumb Landscaping Website", // Slight title enhancement
+    description: "Designed and developed a clean, professional web design for landscaping businesses, showcasing their services and projects. This custom website enhances client engagement with its easy-to-navigate design and SEO-friendly structure.", // Improved description
     category: "Design",
     category2: "Development",
     link: "https://greenthumblandscapes.netlify.app/",
     image: Project1,
+    alt: "Custom web design and development for GreenThumb Landscaping in Manila, featuring service showcases and an engaging user experience." // Specific alt text
   },
   {
     year: "2024",
-    title: "Serenity Spa",
-    description: "Created an elegant and engaging website for spa businesses, highlighting its relaxing services and providing a seamless online experience for potential clients.",
+    title: "Serenity Spa Website", // Slight title enhancement
+    description: "Created an elegant and engaging web design for spa businesses, highlighting their relaxing services and providing a seamless online experience.", // Improved description
     category: "Design",
     category2: "Development",
     link: "https://serenityspaservices.netlify.app/",
     image: Project2,
-  },
+    alt: "Responsive web design for Serenity Spa, showcasing relaxing services and seamless online experience for clients in Quezon City." // Specific alt text
+  }
 ];
 ---
 
-<!-- Project Section -->
 <section id="works" class="space-y-8">
   {ProjectList.map((project, index) => (
-    <div 
-      class={`grid grid-cols-1 lg:grid-cols-12 gap-6 items-center border-2 rounded-lg p-4 bg-background lg:sticky top-20`} 
+    <div
+      class={`grid grid-cols-1 lg:grid-cols-12 gap-6 items-center border-2 rounded-lg p-4 bg-background md:sticky top-20`}
       key={index}
     >
       {/* Conditional order based on index */}
       {index % 2 === 0 ? (
         <>
-          <!-- Project Details -->
           <div class="lg:col-span-4 p-4 order-2">
             <div class="space-y-4">
               <h2 class="text-xl md:text-2xl leading-none">{project.title}</h2>
@@ -49,44 +49,37 @@ const ProjectList = [
                 <span class="span-border text-contrast">{project.category2}</span>
               </div>
             </div>
-            <a 
+            <a
               href={project.link}
-              target="_blank" 
-              type="button" 
-              role="button" 
-              class="block w-max mt-8 bg-text text-white px-6 py-3 rounded-full transition-transform ease-in-out hover:scale-105 duration-300 delay-50" 
+              target="_blank"
+              type="button"
+              role="button"
+              class="block w-max mt-8 bg-text text-white px-6 py-3 rounded-full transition-transform ease-in-out hover:scale-105 duration-300 delay-50"
               rel="noopener noreferrer"
             >
               View project
             </a>
           </div>
-          <!-- Project Details End -->
-
-          <!-- Project Image -->
           <div class="lg:col-span-8 order-1 lg:order-2">
-            <Image 
-              src={project.image} 
-              alt={project.title} 
-              width="1920" 
-              height="1440" 
+            <Image
+              src={project.image}
+              alt={project.alt} width="1920"
+              height="1440"
               class="size-full sm:w-full sm:h-auto xl:h-[32rem] rounded-lg object-cover"
             />
           </div>
         </>
       ) : (
         <>
-          <!-- Project Image -->
           <div class="lg:col-span-8">
-            <Image 
-              src={project.image} 
-              alt={project.title} 
-              width="1920" 
-              height="1440" 
+            <Image
+              src={project.image}
+              alt={project.alt} width="1920"
+              height="1440"
               class="size-full sm:w-full sm:h-auto xl:h-[32rem] rounded-lg object-cover"
             />
           </div>
 
-          <!-- Project Details -->
           <div class="lg:col-span-4 p-4">
             <div class="space-y-4">
               <h2 class="text-xl md:text-2xl leading-none">{project.title}</h2>
@@ -97,12 +90,12 @@ const ProjectList = [
                 <span class="span-border text-contrast">{project.category2}</span>
               </div>
             </div>
-            <a 
+            <a
               href={project.link}
-              target="_blank" 
-              type="button" 
-              role="button" 
-              class="block w-max mt-8 bg-text text-white px-6 py-3 rounded-full transition-transform ease-in-out hover:scale-105 duration-300 delay-50" 
+              target="_blank"
+              type="button"
+              role="button"
+              class="block w-max mt-8 bg-text text-white px-6 py-3 rounded-full transition-transform ease-in-out hover:scale-105 duration-300 delay-50"
               rel="noopener noreferrer"
             >
               View project
