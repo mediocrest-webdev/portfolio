@@ -32,8 +32,8 @@ const faqs = [
 ---
 <section id="faq" class="w-full">
   <div class="mb-6 px-4">
-    <h2 class="mb-4">Frequently Asked Questions</h2>
-    <p class="text-contrast">
+    <h2 class="text-xl md:text-2xl leading-tight mb-4">Frequently Asked Questions</h2>
+    <p class="text-muted">
         Have questions? We've got answers! If you don’t see your question here, feel free to reach out—we’re happy to help!
     </p>
 </div>
@@ -44,7 +44,7 @@ const faqs = [
           {faq.question}
           <span class="transform transition-transform duration-500 delay-75">+</span>
         </button>
-        <div class="p-4 hidden text-contrast">{faq.answer}</div>
+        <div class="p-4 hidden text-muted">{faq.answer}</div>
       </div>
     ))}
   </div>

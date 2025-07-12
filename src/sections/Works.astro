@@ -33,7 +33,7 @@ const ProjectList = [
 <section id="works" class="space-y-8">
   {ProjectList.map((project, index) => (
     <div
-      class={`grid grid-cols-1 lg:grid-cols-12 gap-6 items-center border-2 rounded-lg p-4 bg-background md:sticky top-20`}
+      class={`grid grid-cols-1 lg:grid-cols-12 gap-6 items-center border-2 rounded-lg p-4 bg-background lg:sticky top-20`}
       key={index}
     >
       {/* Conditional order based on index */}
@@ -42,11 +42,11 @@ const ProjectList = [
           <div class="lg:col-span-4 p-4 order-2">
             <div class="space-y-4">
               <h2 class="text-xl md:text-2xl leading-none">{project.title}</h2>
-              <p class="text-contrast text-sm sm:text-base">{project.description}</p>
+              <p class="text-muted text-sm sm:text-base">{project.description}</p>
               <div class="flex gap-1">
-                <span class="span-border text-contrast">{project.year}</span>
-                <span class="span-border text-contrast">{project.category}</span>
-                <span class="span-border text-contrast">{project.category2}</span>
+                <span class="badge text-muted">{project.year}</span>
+                <span class="badge text-muted">{project.category}</span>
+                <span class="badge text-muted">{project.category2}</span>
               </div>
             </div>
             <a
@@ -83,11 +83,11 @@ const ProjectList = [
           <div class="lg:col-span-4 p-4">
             <div class="space-y-4">
               <h2 class="text-xl md:text-2xl leading-none">{project.title}</h2>
-              <p class="text-contrast">{project.description}</p>
+              <p class="text-muted">{project.description}</p>
               <div class="flex gap-1">
-                <span class="span-border text-contrast">{project.year}</span>
-                <span class="span-border text-contrast">{project.category}</span>
-                <span class="span-border text-contrast">{project.category2}</span>
+                <span class="badge text-muted">{project.year}</span>
+                <span class="badge text-muted">{project.category}</span>
+                <span class="badge text-muted">{project.category2}</span>
               </div>
             </div>
             <a
