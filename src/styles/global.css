@@ -35,6 +35,14 @@ body {
   outline-offset: 2px;
 }
 
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
 /* Tailwind Styles */
 @layer base {
   h1{
