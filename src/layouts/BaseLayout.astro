@@ -102,5 +102,48 @@ import "../styles/global.css";
       <slot />
     </div>
     <Footer />
+
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('a[href^="http"]').forEach(function (link) {
+          link.addEventListener("click", function (e) {
+            // Check if the link is external (not your domain)
+            if (!link.href.includes(location.hostname)) {
+              gtag("event", "click", {
+                event_category: "outbound",
+                event_label: link.href,
+                transport_type: "beacon",
+              });
+            }
+          });
+        });
+      });
+    </script>
+
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", function () {
+        let scrollPoints = [25, 50, 75, 100];
+        let triggered = [];
+
+        function trackScrollDepth() {
+          const scrollTop = window.scrollY;
+          const docHeight = document.body.scrollHeight - window.innerHeight;
+          const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+          scrollPoints.forEach(function (point) {
+            if (scrollPercent >= point && !triggered.includes(point)) {
+              gtag("event", "scroll_depth", {
+                event_category: "engagement",
+                event_label: point + "%",
+                value: point,
+              });
+              triggered.push(point);
+            }
+          });
+        }
+
+        window.addEventListener("scroll", trackScrollDepth);
+      });
+    </script>
   </body>
 </html>
