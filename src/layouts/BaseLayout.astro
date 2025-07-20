@@ -80,10 +80,17 @@ import "../styles/global.css";
     <link rel="manifest" href="/site.webmanifest" />
 
     <link
-      rel="stylesheet"
       rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      onload="this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      />
+    </noscript>
   </head>
 
   <body
@@ -98,7 +105,7 @@ import "../styles/global.css";
     </noscript>
 
     <Navbar />
-    <div class="grainy">
+    <div class="min-h-screen flex flex-col">
       <slot />
     </div>
     <Footer />

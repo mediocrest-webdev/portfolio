@@ -1,41 +1,59 @@
-<section id="benefits" class="space-y-8">
+---
+// Benefits.astro
+
+const benefits = [
+  {
+    icon: "bolt",
+    title: "Fast, Focused Web Design Services",
+    description:
+      "I create websites with a clear purpose, fast, efficient, and thoughtfully designed to help businesses stand out online without cutting corners.",
+  },
+  {
+    icon: "palette",
+    title: "Custom Designs That Fit Your Business",
+    description:
+      "I design every website from scratch to reflect your brand, connect with your audience, and deliver a user experience that builds trust and interest.",
+  },
+  {
+    icon: "verified",
+    title: "Modern, Scalable Websites Built to Grow",
+    description:
+      "I build clean, future-ready websites using modern tools and best practices, giving your business a strong online presence that’s easy to grow and maintain.",
+  },
+  {
+    icon: "paid",
+    title: "Transparent Pricing with No Hidden Costs",
+    description:
+      "I offer fair, fixed pricing for web design and development, making it easier for startups, small businesses, and growing brands to invest in quality work they can trust.",
+  },
+];
+---
+
+<section id="benefits" class="space-y-12">
   <center>
-    <h2 class="text-xl md:text-2xl leading-tight mb-6 px-6 md:max-w-lg grid text-center items-center justify-center">
-      Why Choose My Web Design Services in Quezon City & Manila?
+    <h2
+      class="text-xl md:text-2xl leading-tight mb-6 px-6 md:max-w-lg grid text-center items-center justify-center"
+    >
+      Why Choose My Web Design & Development Services?
     </h2>
   </center>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 items-center gap-2">
-    <div class="flex flex-col space-y-4 border h-full p-6 rounded-lg">
-      <i class="material-icons">bolt</i>
-      <h3 class="text-lg md:text-xl leading-tight max-w-[25ch]">Quick, Focused Web Design for Your Business</h3>
-      <p class="text-muted text-sm sm:text-base">
-        I deliver fast, streamlined web design services for businesses in Quezon City, Metro Manila, and beyond without sacrificing quality or detail.
-      </p>
-    </div>
-
-    <div class="flex flex-col space-y-4 border h-full p-6 rounded-lg">
-      <i class="material-icons">palette</i>
-      <h3 class="text-lg md:text-xl leading-tight max-w-[25ch]">Custom, User-Focused Design for Manila Businesses</h3>
-      <p class="text-muted text-sm sm:text-base">
-        Your business is unique and your website should reflect that. I craft tailored, psychology-backed designs for clients in Manila, Quezon City, and nearby areas.
-      </p>
-    </div>
-
-    <div class="flex flex-col space-y-4 border h-full p-6 rounded-lg">
-      <i class="material-icons">verified</i>
-      <h3 class="text-lg md:text-xl leading-tight max-w-[25ch]">Modern, Scalable Websites Built to Grow</h3>
-      <p class="text-muted text-sm sm:text-base">
-        I create clean, future-proof websites using modern frameworks designed to grow with your business in Quezon City, Metro Manila, or anywhere in the Philippines.
-      </p>
-    </div>
-
-    <div class="flex flex-col space-y-4 border h-full p-6 rounded-lg">
-      <i class="material-icons">paid</i>
-      <h3 class="text-lg md:text-xl leading-tight max-w-[25ch]">Transparent, Fixed Pricing for Web Design</h3>
-      <p class="text-muted text-sm sm:text-base">
-        Get honest, fixed-rate pricing for freelance web design perfect for startups and growing businesses across the Philippines.
-      </p>
-    </div>
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 items-center gap-2"
+  >
+    {
+      benefits.map((benefit) => (
+        <div
+          class="flex flex-col space-y-4 border h-full p-6 rounded-lg"
+          key={benefit.title}
+        >
+          <i class="material-icons">{benefit.icon}</i>
+          <h3 class="text-lg md:text-xl leading-tight max-w-[25ch]">
+            {benefit.title}
+          </h3>
+          <p class="text-muted text-sm sm:text-base">{benefit.description}</p>
+        </div>
+      ))
+    }
   </div>
 </section>

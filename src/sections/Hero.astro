@@ -3,35 +3,46 @@
   id="hero"
   class="flex flex-col items-center justify-center text-center my-section-lg md:my-section-xl"
 >
-  <!-- Availability Notice -->
+  <!-- Availability Badge -->
   <div class="flex items-center gap-2 badge mb-4">
-    <!-- Pulsing Circle -->
     <span class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
     <span id="availability-text" class="text-xs text-muted">
-      Available for freelance work
+      Open for freelance projects
     </span>
   </div>
 
   <!-- Hero Heading -->
-<h1 class="text-3xl md:text-4xl lg:text-5xl tracking-tight leading-none mb-4 md:max-w-3xl">
-  Freelance Web Designer & Developer in Quezon City
-</h1>
+  <h1
+    class="text-3xl md:text-4xl lg:text-5xl tracking-tight leading-none mb-4 md:max-w-3xl"
+  >
+    I Design and Build Websites That Earn Trust and Bring Results
+  </h1>
 
-<!-- Hero Description -->
-<p class="text-muted text-sm sm:text-lg max-w-[40ch] md:max-w-[60ch]">
-  I’m Lance Flores — I craft minimal, user-friendly websites built on design psychology and strategy, so your business gets real results, not just a pretty site
-</p>
-
+  <!-- Hero Description -->
+  <p class="text-muted text-sm sm:text-lg max-w-[45ch] md:max-w-[65ch]">
+    I’m Lance Flores — a freelance web designer and developer. I craft clean,
+    simple websites that help businesses reach more people and turn visitors
+    into customers.
+  </p>
 </section>
 <!-- Hero Section End -->
 
-<!-- Inline Script to Set Current Month -->
 <script>
-  const availabilityEl = document.getElementById('availability-text');
+  const availabilityEl = document.getElementById("availability-text");
   const now = new Date();
   const monthNames = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
-  availabilityEl.textContent = `Available for freelance work, ${monthNames[now.getMonth()]} ${now.getFullYear()}`;
+  availabilityEl.textContent = `Open for freelance projects — ${monthNames[now.getMonth()]} ${now.getFullYear()}`;
 </script>
