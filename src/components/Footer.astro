@@ -1,38 +1,151 @@
-<footer class="mt-auto w-full py-10 px-4 sm:px-6 lg:px-8 mx-auto">
-  <!-- Grid -->
-  <div class="flex flex-col justify-center items-center md:grid gap-5 md:grid-cols-3">
+<footer class="mt-auto w-full py-12 px-6 md:px-10">
+  <div class=" grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <!-- Contact -->
+    <div class="flex flex-col">
+      <h3 class="text-lg font-bold mb-2">Let's work together</h3>
+      <a
+        href="mailto:hello.lanceflores@gmail.com"
+        class="text-muted hover:underline"
+      >
+        hello.lanceflores@gmail.com
+      </a>
+    </div>
+
+    <!-- Local Time -->
     <div>
-      <img src="/logo.svg" alt="logo" width="100" height="36.84" aria-hidden="true" aria-label="brand" class="object-cover">
+      <h3 class="text-lg font-semibold mb-2">Local time</h3>
+      <p id="local-time-manila" class="text-muted text-sm"></p>
     </div>
 
-    <p class="md:text-center">
-      2024 - All rights reserved.
-    </p>
-
-    <!-- Social Links -->
-    <div class="space-x-2 md:text-end">
-      <a class="inline-flex items-center justify-center text-sm text-gray-500 border border-transparent rounded-full size-8 gap-x-2 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none" href="https://www.facebook.com/lanxflores" target="_blank">
-        <span class="sr-only">facebook</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
-      </a>
-
-      <a class="inline-flex items-center justify-center text-sm text-gray-500 border border-transparent rounded-full size-8 gap-x-2 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none" href="https://www.instagram.com/lanceflores.dev/" target="_blank">
-        <span class="sr-only">instagram</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-      </a>
-
-      <a class="inline-flex items-center justify-center text-sm text-gray-500 border border-transparent rounded-full size-8 gap-x-2 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none" href="https://www.linkedin.com/in/lancefloresdev" target="_blank">
-        <span class="sr-only">linkedin</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z"/></svg>
-      </a>
-
-      <a class="inline-flex items-center justify-center text-sm text-gray-500 border border-transparent rounded-full size-8 gap-x-2 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none" href="tel:09162870007">
-        <span class="sr-only">phone</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.004 1.004 0 011.11-.21c1.21.48 2.53.73 3.88.73a1 1 0 011 1v3.5a1 1 0 01-1 1C10.05 22 2 13.95 2 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.25 2.67.73 3.88a1 1 0 01-.21 1.11l-2.4 2.4z"/></svg>
-      </a>
-
+    <!-- Navigation -->
+    <div>
+      <h3 class="text-lg font-bold mb-2">Menu</h3>
+      <ul class="space-y-1 text-base text-gray-700">
+        <li>
+          <button
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+            class="hover:text-black transition-colors duration-200">Home</button
+          >
+        </li>
+        <li>
+          <a
+            href="#works"
+            class="hover:text-black transition-colors duration-200">Works</a
+          >
+        </li>
+        <li>
+          <a
+            href="#services"
+            class="hover:text-black transition-colors duration-200">Services</a
+          >
+        </li>
+        <li>
+          <a
+            href="/contact"
+            class="hover:text-black transition-colors duration-200">Contact</a
+          >
+        </li>
+      </ul>
     </div>
-    <!-- Social Links End -->
+
+    <!-- Socials -->
+    <div>
+      <h3 class="text-lg font-bold mb-2">Socials</h3>
+      <div class="flex flex-wrap gap-2">
+        <!-- Reusable button style -->
+        <a
+          href="https://www.facebook.com/lanxflores"
+          target="_blank"
+          aria-label="Facebook"
+          class="footer-icon"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1024"
+            height="1024"
+            viewBox="0 0 1024 1024"
+            ><path
+              fill="currentColor"
+              d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-92.4 233.5h-63.9c-50.1 0-59.8 23.8-59.8 58.8v77.1h119.6l-15.6 120.7h-104V912H539.2V602.2H434.9V481.4h104.3v-89c0-103.3 63.1-159.6 155.3-159.6c44.2 0 82.1 3.3 93.2 4.8v107.9z"
+            ></path></svg
+          ></a
+        >
+        <a
+          href="https://www.instagram.com/lanceflores.netlify.app/"
+          target="_blank"
+          aria-label="Instagram"
+          class="footer-icon"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1024"
+            height="1024"
+            viewBox="0 0 1024 1024"
+            ><path
+              fill="currentColor"
+              d="M512 306.9c-113.5 0-205.1 91.6-205.1 205.1S398.5 717.1 512 717.1S717.1 625.5 717.1 512S625.5 306.9 512 306.9m0 338.4c-73.4 0-133.3-59.9-133.3-133.3S438.6 378.7 512 378.7S645.3 438.6 645.3 512S585.4 645.3 512 645.3m213.5-394.6c-26.5 0-47.9 21.4-47.9 47.9s21.4 47.9 47.9 47.9s47.9-21.3 47.9-47.9a47.84 47.84 0 0 0-47.9-47.9M911.8 512c0-55.2.5-109.9-2.6-165c-3.1-64-17.7-120.8-64.5-167.6c-46.9-46.9-103.6-61.4-167.6-64.5c-55.2-3.1-109.9-2.6-165-2.6c-55.2 0-109.9-.5-165 2.6c-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6c46.9 46.9 103.6 61.4 167.6 64.5c55.2 3.1 109.9 2.6 165 2.6c55.2 0 109.9.5 165-2.6c64-3.1 120.8-17.7 167.6-64.5c46.9-46.9 61.4-103.6 64.5-167.6c3.2-55.1 2.6-109.8 2.6-165m-88 235.8c-7.3 18.2-16.1 31.8-30.2 45.8c-14.1 14.1-27.6 22.9-45.8 30.2C695.2 844.7 570.3 840 512 840s-183.3 4.7-235.9-16.1c-18.2-7.3-31.8-16.1-45.8-30.2c-14.1-14.1-22.9-27.6-30.2-45.8C179.3 695.2 184 570.3 184 512s-4.7-183.3 16.1-235.9c7.3-18.2 16.1-31.8 30.2-45.8s27.6-22.9 45.8-30.2C328.7 179.3 453.7 184 512 184s183.3-4.7 235.9 16.1c18.2 7.3 31.8 16.1 45.8 30.2c14.1 14.1 22.9 27.6 30.2 45.8C844.7 328.7 840 453.7 840 512s4.7 183.2-16.2 235.8"
+            ></path></svg
+          ></a
+        >
+        <a
+          href="https://www.linkedin.com/in/lancefloresdev"
+          target="_blank"
+          aria-label="LinkedIn"
+          class="footer-icon"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1024"
+            height="1024"
+            viewBox="0 0 1024 1024"
+            ><path
+              fill="currentColor"
+              d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32M349.3 793.7H230.6V411.9h118.7zm-59.3-434a68.8 68.8 0 1 1 68.8-68.8c-.1 38-30.9 68.8-68.8 68.8m503.7 434H675.1V608c0-44.3-.8-101.2-61.7-101.2c-61.7 0-71.2 48.2-71.2 98v188.9H423.7V411.9h113.8v52.2h1.6c15.8-30 54.5-61.7 112.3-61.7c120.2 0 142.3 79.1 142.3 181.9z"
+            ></path></svg
+          ></a
+        >
+        <a href="tel:09162870007" aria-label="Phone" class="footer-icon"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1024"
+            height="1024"
+            viewBox="0 0 1024 1024"
+            ><path
+              fill="currentColor"
+              d="M877.1 238.7L770.6 132.3c-13-13-30.4-20.3-48.8-20.3s-35.8 7.2-48.8 20.3L558.3 246.8c-13 13-20.3 30.5-20.3 48.9c0 18.5 7.2 35.8 20.3 48.9l89.6 89.7a405.5 405.5 0 0 1-86.4 127.3c-36.7 36.9-79.6 66-127.2 86.6l-89.6-89.7c-13-13-30.4-20.3-48.8-20.3a68.2 68.2 0 0 0-48.8 20.3L132.3 673c-13 13-20.3 30.5-20.3 48.9c0 18.5 7.2 35.8 20.3 48.9l106.4 106.4c22.2 22.2 52.8 34.9 84.2 34.9c6.5 0 12.8-.5 19.2-1.6c132.4-21.8 263.8-92.3 369.9-198.3C818 606 888.4 474.6 910.4 342.1c6.3-37.6-6.3-76.3-33.3-103.4m-37.6 91.5c-19.5 117.9-82.9 235.5-178.4 331s-213 158.9-330.9 178.4c-14.8 2.5-30-2.5-40.8-13.2L184.9 721.9L295.7 611l119.8 120l.9.9l21.6-8a481.29 481.29 0 0 0 285.7-285.8l8-21.6l-120.8-120.7l110.8-110.9l104.5 104.5c10.8 10.8 15.8 26 13.3 40.8"
+            ></path></svg
+          ></a
+        >
+      </div>
+    </div>
   </div>
-  <!-- End Grid -->
+
+  <!-- Copyright -->
+  <div
+    class="mt-12 pt-6 border-t border-gray-200 text-center text-sm text-muted"
+  >
+    © 2024 Lance Flores – All rights reserved.
+  </div>
 </footer>
+
+<style>
+  .footer-icon {
+    @apply inline-flex items-center justify-center rounded-lg size-10 hover:bg-gray-100 transition-colors duration-200;
+  }
+</style>
+
+<script>
+  // Local Manila time updater
+  function updateManilaTime() {
+    const now = new Date();
+    const options = {
+      timeZone: "Asia/Manila",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true,
+    };
+    document.getElementById("local-time-manila").textContent =
+      now.toLocaleTimeString("en-US", options) + " MNL, PH";
+  }
+
+  updateManilaTime();
+  setInterval(updateManilaTime, 1000);
+</script>

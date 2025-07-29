@@ -8,7 +8,7 @@ import Project2 from "../images/project-2.webp";
 const ProjectList = [
   {
     year: "2024",
-    title: "GreenThumb Landscaping Website",
+    title: "GreenThumb Landscaping",
     description:
       "Designed and built a clean, professional site for a landscaping business, showcasing their services and projects with a user-friendly, SEO-ready design.",
     category: "Design",
@@ -19,7 +19,7 @@ const ProjectList = [
   },
   {
     year: "2024",
-    title: "Serenity Spa Website",
+    title: "Serenity Spa",
     description:
       "Created an elegant website for a spa business, highlighting their services and giving clients a smooth, relaxing online experience.",
     category: "Design",
@@ -28,94 +28,81 @@ const ProjectList = [
     image: Project2,
     alt: "Web design for Serenity Spa, showcasing services with a seamless online experience for clients.",
   },
+  
 ];
 ---
 
-<section id="works" class="space-y-8">
-  {
-    ProjectList.map((project, index) => (
+<section id="works">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 md:px-0">
+    {ProjectList.map((project, index) => (
       <div
-        class={`grid grid-cols-1 lg:grid-cols-12 gap-6 items-center border-2 rounded-lg p-4 bg-background lg:sticky top-20`}
+        class="group flex flex-col overflow-hidden focus:outline-none border rounded-xl"
         key={index}
       >
-        {/* Conditional order based on index */}
-        {index % 2 === 0 ? (
-          <>
-            <div class="lg:col-span-4 p-4 order-2">
-              <div class="space-y-4">
-                <h2 class="text-xl md:text-2xl leading-none">
-                  {project.title}
-                </h2>
-                <p class="text-muted text-sm sm:text-base">
-                  {project.description}
-                </p>
-                <div class="flex gap-1">
-                  <span class="badge text-muted">{project.year}</span>
-                  <span class="badge text-muted">{project.category}</span>
-                  <span class="badge text-muted">{project.category2}</span>
-                </div>
-              </div>
-              <a
-                href={project.link}
-                target="_blank"
-                type="button"
-                role="button"
-                class="block w-max mt-8 bg-text text-white px-6 py-3 rounded-full transition-transform ease-in-out hover:scale-105 duration-300 delay-50"
-                rel="noopener noreferrer"
-              >
-                View project
-              </a>
-            </div>
-            <div class="lg:col-span-8 order-1 lg:order-2">
-              <Image
-                src={project.image}
-                alt={project.alt}
-                width="1920"
-                height="1440"
-                class="size-full sm:w-full sm:h-auto xl:h-[32rem] rounded-lg object-cover"
-              />
-            </div>
-          </>
-        ) : (
-          <>
-            <div class="lg:col-span-8">
-              <Image
-                src={project.image}
-                alt={project.alt}
-                width="1920"
-                height="1440"
-                class="size-full sm:w-full sm:h-auto xl:h-[32rem] rounded-lg object-cover"
-              />
-            </div>
+        <!-- Image -->
+        <div class=" overflow-hidden">
+          <Image
+            src={project.image}
+            alt={project.alt}
+            width="1920"
+            height="1440"
+            class="rounded-xl inset-0 object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 group-focus:scale-105 "
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
 
-            <div class="lg:col-span-4 p-4">
-              <div class="space-y-4">
-                <h2 class="text-xl md:text-2xl leading-none">
-                  {project.title}
-                </h2>
-                <p class="text-muted text-sm sm:text-base">
-                  {project.description}
-                </p>
-                <div class="flex gap-1">
-                  <span class="badge text-muted">{project.year}</span>
-                  <span class="badge text-muted">{project.category}</span>
-                  <span class="badge text-muted">{project.category2}</span>
-                </div>
-              </div>
-              <a
-                href={project.link}
-                target="_blank"
-                type="button"
-                role="button"
-                class="block w-max mt-8 bg-text text-white px-6 py-3 rounded-full transition-transform ease-in-out hover:scale-105 duration-300 delay-50"
-                rel="noopener noreferrer"
-              >
-                View project
-              </a>
+        <!-- Text Content -->
+        <div class="p-6 flex flex-col flex-1 justify-between space-y-8">
+          <div class="space-y-3">
+            <h3 class="text-xl text-text font-medium leading-snug">
+              {project.title}
+            </h3>
+
+            <p class="text-muted text-base leading-relaxed line-clamp-3">
+              {project.description}
+            </p>
+
+            <div class="flex flex-wrap gap-2 pt-1">
+              <span class="py-1 px-2 bg-gray-200 text-gray-600 text-xs font-medium rounded">
+                {project.year}
+              </span>
+              <span class="py-1 px-2 bg-gray-200 text-gray-600 text-xs font-medium rounded">
+                {project.category}
+              </span>
+              <span class="py-1 px-2 bg-gray-200 text-gray-600 text-xs font-medium rounded">
+                {project.category2}
+              </span>
             </div>
-          </>
-        )}
+          </div>
+
+          <!-- View Project Button -->
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-4 inline-flex items-center gap-2 w-max text-center px-6 py-3 md:px-8 md:py-4 rounded-lg bg-text font-medium text-zinc-100 transition-transform hover:scale-105 duration-300"
+          >
+            View project
+             <svg
+      class="shrink-0 w-4 h-4 group-hover:translate-x-1 transition"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+    </svg>
+          </a>
+        </div>
       </div>
-    ))
-  }
+    ))}
+  </div>
 </section>
+
+
+

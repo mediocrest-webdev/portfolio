@@ -4,16 +4,26 @@ import Hero from "../sections/Hero.astro";
 import Testimonial from "../sections/Testimonial.astro";
 import CTA from "../sections/CTA.astro";
 import Works from "../sections/Works.astro";
-import Benefits from "../sections/Benefits.astro";
+import Process from "../sections/Process.astro";
 import FAQ from "../sections/FAQ.astro";
+import Services from "../sections/Services.astro";
+import About from "../sections/About.astro";
 ---
+
 <BaseLayout>
-	<main class="px-6 sm:px-8 scroll-smooth space-y-section-lg md:space-y-section-xxl relative">
-		<Hero />
-		<Works />
-		<Benefits />
-		<Testimonial />
-		<FAQ />
-		<CTA />
-	</main>
+  <main class="relative scroll-smooth space-y-section-lg">
+    <Hero />
+    <Works />
+
+    <!-- Foreground content with solid backgrounds and spacing -->
+    <div class="relative bg-zinc-950 text-zinc-100 space-y-section-xl rounded-t-lg">
+      <Services />
+      <About />
+      <Process />
+    </div>
+
+    <FAQ />
+    <Testimonial />
+    <CTA />
+  </main>
 </BaseLayout>

@@ -1,83 +1,76 @@
----
-const faqs = [
-    { 
-      question: "How do I get started?", 
-      answer: "Simply book a consultation call or email us with your project details. We’ll discuss your goals, needs, and how we can bring your vision to life."
-    },
-  { 
-    question: "What services do you offer?", 
-    answer: "We provide web development, web design, and Figma-to-website conversions. Our expertise includes responsive, SEO-optimized, and high-performance websites tailored to your needs."
-  },
-  { 
-    question: "How much do your services cost?", 
-    answer: "Pricing varies based on project scope, features, and complexity. We offer customized quotes after discussing your requirements to ensure fair and transparent pricing."
-  },
-  { 
-    question: "Do you offer ongoing support and maintenance?", 
-    answer: "Yes! We offer ongoing maintenance, updates, and support plans to keep your website secure, updated, and running smoothly."
-  },
-  { 
-    question: "Can you redesign my existing website?", 
-    answer: "Of course! We offer website redesigns to improve performance, modernize aesthetics, and enhance user experience."
-  },
-  { 
-    question: "Will my website be mobile-friendly?", 
-    answer: "Absolutely! All websites we build are fully responsive, ensuring a seamless experience across desktops, tablets, and mobile devices."
-  },
-  { 
-    question: "What platforms do you work with?", 
-    answer: "We specialize in Astro, Tailwind CSS, and custom-coded solutions."
-  },
-];
----
-<section id="faq" class="w-full">
-  <div class="mb-6 px-4">
-    <h2 class="text-xl md:text-2xl leading-tight mb-4">Frequently Asked Questions</h2>
-    <p class="text-muted text-sm sm:text-base">
-        Have questions? We've got answers! If you don’t see your question here, feel free to reach out—we’re happy to help!
+<!-- FAQ Section -->
+<section id="faq" class="px-8">
+  <!-- Heading -->
+  <div class="space-y-2 mb-12">
+    <h2 class="text-2xl md:text-3xl font-bold text-gray-800">
+      Frequently asked questions
+    </h2>
+    <p class="text-muted text-base leading-relaxed">
+      Quick answers to common questions — so you know exactly what to expect.
     </p>
-</div>
-  <div class="space-y-2">
-    {faqs.map((faq, index) => (
-      <div class="border rounded-lg overflow-hidden" key={index}>
-        <button class="w-full p-4 text-left flex justify-between items-center toggle-faq" data-index={index}>
-          {faq.question}
-          <span class="transform transition-transform duration-500 delay-75">+</span>
-        </button>
-        <div class="p-4 hidden text-muted">{faq.answer}</div>
-      </div>
-    ))}
+  </div>
+
+  <!-- Grid -->
+  <div class="grid sm:grid-cols-2 gap-y-12 md:gap-x-12 lg:gap-x-48">
+    <div>
+      <h3 class="text-lg text-zinc-900 font-medium">
+        What if I’m not sure what I need yet?
+      </h3>
+      <p class="mt-2 text-gray-600">
+        Totally okay — most of my clients come in with just a goal or a pain
+        point. I’ll help you figure out what makes sense for your needs and
+        budget.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-lg text-zinc-900 font-medium">
+        How much does a website cost?
+      </h3>
+      <p class="mt-2 text-gray-600">
+        It depends on the scope and features. I’ll walk you through options
+        after a quick call, so you’ll always know what you're paying for.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-lg text-zinc-900 font-medium">
+        What’s your usual timeline?
+      </h3>
+      <p class="mt-2 text-gray-600">
+        Most projects take 2 to 4 weeks. If you have a deadline, let’s talk —
+        I’ll be upfront about what’s doable.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-lg text-zinc-900 font-medium">
+        Do you handle everything or just development?
+      </h3>
+      <p class="mt-2 text-gray-600">
+        I do both design and development, so you don’t need to juggle multiple
+        people. From planning to launch, I’ve got you covered.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-lg text-zinc-900 font-medium">
+        Will I be able to update the site myself?
+      </h3>
+      <p class="mt-2 text-gray-600">
+        Yes! I build with clean code and give you options for easy content
+        updates — with or without code.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-lg text-zinc-900 font-medium">
+        What if I need help after launch?
+      </h3>
+      <p class="mt-2 text-gray-600">
+        I offer post-launch support and maintenance options, or we can work on a
+        retainer if you want long-term help.
+      </p>
+    </div>
   </div>
 </section>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const faqButtons = document.querySelectorAll(".toggle-faq");
-    let activeAnswer = null; // Track the currently open answer
-
-    faqButtons.forEach(button => {
-      button.addEventListener("click", function () {
-        const answer = this.nextElementSibling;
-        const icon = this.querySelector("span");
-
-        // Close the previously opened answer if it's different
-        if (activeAnswer && activeAnswer !== answer) {
-          activeAnswer.classList.add("hidden");
-          activeAnswer.previousElementSibling.querySelector("span").textContent = "+";
-        }
-
-        // Toggle the current one
-        if (answer.classList.contains("hidden")) {
-          answer.classList.remove("hidden");
-          icon.textContent = "-";
-          activeAnswer = answer;
-        } else {
-          answer.classList.add("hidden");
-          icon.textContent = "+";
-          activeAnswer = null;
-        }
-      });
-    });
-  });
-</script>
-

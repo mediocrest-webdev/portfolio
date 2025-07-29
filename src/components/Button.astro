@@ -1,13 +1,12 @@
 ---
-const { href, style, label } = Astro.props;
+const { href, style, link, namespace, config, label } = Astro.props;
 ---
-<a
+<button
   role="button"
-  href={href}
   class={style}
-  data-cal-link="mediocrest/15min"
-  data-cal-namespace="15min" 
-  data-cal-config='{"layout":"month_view"}'
+  data-cal-link={link}
+  data-cal-namespace={namespace}
+  data-cal-config={config}
 >
   {label}
-</a>
+</button>

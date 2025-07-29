@@ -1,23 +1,71 @@
 ---
 import Button from "../components/Button.astro";
 ---
+
 <!-- Contact Section -->
 <section
   id="contact"
-  class="flex flex-col justify-center items-center text-center border-2 rounded-lg p-16"
+  class="flex flex-col items-center justify-center text-center bg-gray-950 text-zinc-100 rounded-t-lg px-6 sm:px-8 md:px-12 py-28 md:py-36"
 >
-  <span class="badge mb-4 text-xs w-max"
-    >Ready to elevate your online presence?</span
+  <p class="mb-4">
+    Ready to take your online presence to the next level?
+  </p>
+
+  <h3
+    class="text-3xl sm:text-4xl md:text-6xl leading-tight font-medium max-w-2xl mb-10"
   >
-  <h3 class="text-3xl md:text-7xl mb-6 max-w-2xl">
-    LET'S MAKE IT HAPPEN 
+    Let’s make something great together
   </h3>
-    <Button
-        style="bg-text text-white px-4 py-2 md:px-6 md:py-3 sm:px-4 sm:py-2 rounded-full hover:shadow-sm transition-transform hover:scale-105 duration-300 delay-50"
-        label="Book a call"
-        data-cal-link="mediocrest/15min"
-        data-cal-namespace="15min"
-        data-cal-config='{"layout":"month_view"}'
-      />
+
+  <Button
+    style="bg-background text-text px-6 py-3 md:px-8 md:py-4 rounded-lg hover:shadow-md transition-transform hover:scale-105 duration-300"
+    label="Say hi and share your goals 👋🏼"
+    link="mediocrest/15min"
+    namespace="15min"
+    config='{"layout":"month_view"}'
+  />
 </section>
-<!-- Contact Section End -->
+
+<!-- Cal element-click embed code -->
+<script type="text/javascript">
+  (function (C, A, L) {
+    let p = function (a, ar) {
+      a.q.push(ar);
+    };
+    let d = C.document;
+    C.Cal =
+      C.Cal ||
+      function () {
+        let cal = C.Cal;
+        let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {};
+          cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () {
+            p(api, arguments);
+          };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, ["initNamespace", namespace]);
+          } else p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+  })(window, "https://app.cal.com/embed/embed.js", "init");
+
+  Cal("init", "15min", { origin: "https://cal.com" });
+
+  Cal.ns["15min"]("ui", {
+    styles: { branding: { brandColor: "#000000" } },
+    hideEventTypeDetails: false,
+    layout: "month_view",
+  });
+</script>

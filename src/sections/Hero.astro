@@ -1,32 +1,53 @@
-<!-- Hero Section -->
 <section
   id="hero"
-  class="flex flex-col items-center justify-center text-center my-section-lg md:my-section-xl"
+  class="flex flex-col md:justify-center md:items-center md:text-center my-section-lg md:my-section-xl px-6"
 >
   <!-- Availability Badge -->
-  <div class="flex items-center gap-2 badge mb-4">
-    <span class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
-    <span id="availability-text" class="text-xs text-muted">
-      Open for freelance projects
+  <div class="flex items-center gap-2 badge mb-6 w-max">
+    <span class="w-3 h-3 bg-green-500 rounded-lg animate-pulse"></span>
+    <span id="availability-text" class="text-sm text-muted font-normal">
+      Now booking new projects
     </span>
   </div>
 
   <!-- Hero Heading -->
   <h1
-    class="text-3xl md:text-4xl lg:text-5xl tracking-tight leading-none mb-4 md:max-w-3xl"
+    class="text-4xl md:text-5xl lg:text-7xl leading-none font-medium tracking-tight mb-6"
   >
-    I Design and Build Websites That Earn Trust and Bring Results
+    Websites that earn trust and grow your business
   </h1>
 
-  <!-- Hero Description -->
-  <p class="text-muted text-sm sm:text-lg max-w-[45ch] md:max-w-[65ch]">
-    I’m Lance Flores — a freelance web designer and developer. I craft clean,
-    simple websites that help businesses reach more people and turn visitors
-    into customers.
+  <!-- Subheading -->
+  <p class="text-base sm:text-lg max-w-[60ch] mb-10">
+    Hey, I’m Lance, a Web Developer and Designer building clean, and fast
+    websites that help you attract leads and build a strong online presence
   </p>
-</section>
-<!-- Hero Section End -->
 
+  <!-- CTA -->
+  <a
+    href="#contact"
+    rel="noopener noreferrer"
+    class="inline-flex items-center gap-2 w-max text-center px-6 py-3 md:px-8 md:py-4 rounded-lg bg-text text-zinc-100 text-base font-medium transition-transform hover:scale-105 duration-300"
+  >
+    Book a free consultation
+
+    <svg
+      class="shrink-0 w-4 h-4 group-hover:translate-x-1 transition"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+    </svg>
+  </a>
+</section>
+
+<!-- Script to dynamically change month -->
 <script>
   const availabilityEl = document.getElementById("availability-text");
   const now = new Date();
@@ -44,5 +65,5 @@
     "November",
     "December",
   ];
-  availabilityEl.textContent = `Open for freelance projects — ${monthNames[now.getMonth()]} ${now.getFullYear()}`;
+  availabilityEl.textContent = `Now booking new projects — ${monthNames[now.getMonth()]}, ${now.getFullYear()}`;
 </script>

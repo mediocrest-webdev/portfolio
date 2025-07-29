@@ -1,18 +1,44 @@
+/* Tailwind Directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Fonts */
+/* Font Face */
 @font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter-Variable.ttf') format('truetype');
-  font-weight: 100 900;
+  font-family: 'OpenSauceSans';
+  src: url('../fonts/OpenSauceSans-Regular.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
-  font-stretch: 75% 125%;
 }
 
-/* Global styles */
+@font-face {
+  font-family: 'OpenSauceSans';
+  src: url('../fonts/OpenSauceSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSauceSans';
+  src: url('../fonts/OpenSauceSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* Reset & Global Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -20,14 +46,40 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', sans-serif;
+  min-height: 100%;
+  font-family: 'OpenSauceSans', sans-serif;
   font-weight: 400;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
 }
 
 :focus-visible {
@@ -35,22 +87,20 @@ body {
   outline-offset: 2px;
 }
 
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-  height: auto;
-}
 
-/* Tailwind Styles */
+
+/* Tailwind Layered Styles */
 @layer base {
-  h1{
+  body {
+    @apply font-sans text-base font-normal;
+  }
+
+  h1 {
     @apply max-w-[30ch] break-words text-balance;
   }
 
   h3 {
-    @apply leading-tight max-w-[30ch] break-words;
+    @apply leading-tight max-w-[40ch] break-words;
   }
 
   p {
@@ -66,6 +116,6 @@ picture {
 
 @layer components {
   .badge {
-    @apply px-3 py-1 text-sm font-medium border-2 rounded-full text-nowrap;
+    @apply px-3 py-1 border shadow-sm rounded-lg whitespace-nowrap;
   }
 }
